@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components
+{
+    .header
+    {
+        @apply flex justify-between items-center m-0 py-[1.5%] px-[2%] sticky top-0 bg-white;
+
+        & .img
+        {
+            @apply w-[50%] h-[20%];
+        }
+
+        & .menu
+        {
+            @apply flex justify-between gap-6 items-center border-none;
+
+            & a
+            {
+                @apply text-2xl;
+            }
+
+           
+            
+        }
+
+        & .loginHeader
+        {
+            @apply flex items-center justify-center gap-12 w-[25%];
+
+            & p
+            {
+                @apply text-2xl;
+            }
+
+            & .botao
+            {
+                @apply bg-[#0065FC] py-[3%] px-[4%] rounded-[10px] text-white cursor-pointer ;
+            }
+        }   
+    }
+
+    .footer
+    {
+        @apply bg-[#001B74] text-white flex justify-center items-center py-[2%] px-[5%];
+
+        & .img
+        {
+            @apply w-[15%] mr-4;
+        }
+
+        & h1
+        {
+            @apply text-3xl font-normal
+        }
+    }
+}
