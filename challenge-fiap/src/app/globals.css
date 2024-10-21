@@ -202,11 +202,11 @@ body {
 
     .cadastroGeral
     {
-        @apply flex;
+        @apply flex h-[90vh];
 
         & .containerImg
         {
-            @apply h-[78vh] w-[50%];
+            @apply h-[100%] w-[50%];
 
             & .img-login
             {
@@ -217,11 +217,11 @@ body {
 
         & .containerExternoForm
         {
-            @apply flex justify-center items-center h-[100vh] py-[2%] px-[5%] bg-gradient-to-r from-[#0c2f88] via-[#082770] to-[#020848] h-[70vh] w-[100%];
+            @apply flex justify-center items-center h-[100%] py-[2%] px-[5%] bg-gradient-to-r from-[#0c2f88] via-[#082770] to-[#020848]  w-[100%];
 
             & .containerForm
             {
-                @apply w-[50%] py-[10%] px-[5%] text-white flex flex-col items-center justify-center h-[100%] rounded-[12px] bg-gradient-to-r from-[#082263] via-[#00154A] to-[#001345] h-[70vh] w-[100%];
+                @apply w-[50%] py-[10%] px-[5%] text-white flex flex-col items-center  h-[100%] rounded-[12px] bg-gradient-to-r from-[#082263] via-[#00154A] to-[#001345]  w-[100%];
 
                 & .form
                 {
@@ -233,12 +233,21 @@ body {
 
                     & button
                     {
-                        @apply px-[2.5%] py-[2.5%] text-white rounded-[20px] font-[1.7rem] font-[500] bg-blue-500 w-[40%] bg-gradient-to-r from-[#003c97] via-[#082770] to-[#020848] text-[1.5rem];
+                        @apply px-[3%] py-[2.5%] text-white rounded-[20px] font-[1.7rem] font-[500] bg-blue-500 w-[40%] bg-gradient-to-r from-[#003c97] via-[#082770] to-[#020848] text-[1.5rem];
                     }
                 }
             }
         }
     }
+
+    .linha
+    {
+        @apply flex gap-[40px] ;
+
+       
+    }
+
+    
 
 
 
