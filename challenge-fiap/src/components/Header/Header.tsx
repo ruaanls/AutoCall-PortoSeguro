@@ -18,7 +18,7 @@ export default function Header() {
         <header className="header">
             <Link href={"/"}><Image src={logo} alt="Teste" className="img"/></Link>
             <nav className="menu">
-                <Link href={"/manutencao"}><p>Agendar</p></Link>
+                <Link href={"/agendamento"}><p>Agendar</p></Link>
                 <Link href={"/cadastroVeiculo"}><p>Cadastrar Veículo</p></Link>
                 <Link href={"/manutencao"}><p>Integrantes</p></Link>
             </nav>
