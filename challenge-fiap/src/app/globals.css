@@ -1,254 +1,285 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 body {
     @apply font-sans;
 }
 
-.containerInicio
-{
-    background-image: url('/img/img-fundo-inicio.png');
+.containerInicio {
+    background-image: url("/img/img-fundo-inicio.png");
     background-size: cover;
 }
 
-@layer components
-{
-
+@layer components {
     .bg-custom-gradient {
-        background: linear-gradient(to right, #133EAD 2%, #00154A 35%, #040041 70%);
-      }
-
-    .header
-    {
-        @apply flex justify-between items-center m-0 py-[1.5%] px-[2%] sticky top-0 bg-white;
-
-        & .img
-        {
-            @apply w-[50%] h-[20%];
-        }
-
-        & .menu
-        {
-            @apply flex justify-between gap-6 items-center border-none;
-
-            & a
-            {
-                @apply text-2xl;
-            }
-
-           
-            
-        }
-
-        & .loginHeader
-        {
-            @apply flex items-center justify-center gap-12 w-[25%];
-
-            & p
-            {
-                @apply text-2xl;
-            }
-
-            & .botao
-            {
-                @apply bg-[#0065FC] py-[3%] px-[4%] rounded-[10px] text-white cursor-pointer ;
-            }
-        }   
+    background: linear-gradient(to right, #133ead 2%, #00154a 35%, #040041 70%);
     }
 
-    .footer
-    {
+    .header {
+    @apply flex justify-between items-center m-0 py-[1.5%] px-[2%] sticky top-0 bg-white/90 backdrop-blur-sm;
+
+    & .img {
+        @apply w-[50%] h-[20%];
+    }
+
+    & .menu {
+        @apply flex justify-between gap-6 items-center border-none;
+
+    & a {
+        @apply text-2xl;
+        }
+    }
+
+    & .loginHeader {
+        @apply flex items-center justify-center gap-12 w-[25%];
+
+    & p {
+        @apply text-2xl;
+    }
+
+    & .botao {
+        @apply bg-[#0065FC] py-[3%] px-[4%] rounded-[10px] text-white cursor-pointer;
+        }
+    }
+}
+
+    .footer {
         @apply bg-[#001B74] text-white flex justify-center items-center py-[2%] px-[5%];
 
-        & .img
-        {
-            @apply w-[15%] mr-4;
-        }
-
-        & h1
-        {
-            @apply text-3xl font-normal
-        }
+    & .img {
+        @apply w-[15%] mr-4;
     }
 
+    & h1 {
+        @apply text-3xl font-normal;
+    }
+}
 
-
-    /* Página Inicial */ 
-    .containerInicio
-    {
+  /* Página Inicial */
+    .containerInicio {
         @apply h-[70vh] w-[100%] bg-slate-500 flex items-center bg-[url('/img/img-fundo-inicio.png')] bg-cover bg-center;
 
-        & p, h1
-        {
-            @apply text-[2rem] font-[400] mb-5 text-white
-        }
-
-        & span
-        {
-            @apply bg-[#0030AB] p-[8px] rounded-[3px]
-        }
-
-        & .inicial
-        {
-            @apply my-[0.5%] mx-[10%] ;
-        }
-
-        & .textoHome
-        {
-            @apply w-[50%]
-        }
-
-        & .botaoHome
-        {
-            @apply rounded-[12px] bg-[#001B74] py-[15px] px-[25px] text-white cursor-pointer  flex items-center;
-            & h1
-            {
-                @apply mb-0;
-            }
-        }
+    & p,h1 {
+        @apply text-[2rem] font-[400] mb-5 text-white;
     }
 
-    .txtOpcoes
-    {
-        @apply my-[3rem] mx-[17%] leading-[1.2] text-[#1F1F1F] text-center;
+    & span {
+        @apply bg-[#0030AB] p-[8px] rounded-[3px];
     }
 
-    .opcaoPrincipal
-    {
-        @apply flex justify-center items-center gap-[32px] mx-[5%] text-[1.2rem];
-        
-        & button
-        {
-            @apply bg-[#001B74] text-white rounded-[12px] p-[2%] w-[35%] max-w-[425px] h-[198px] max-h-[220px] cursor-pointer;
-        }
-
-        & h1
-        {
-            @apply text-[1.8rem] font-[600];
-        }
-
-        & p
-        {
-            @apply text-[1.3rem] font-[300];
-        }
+    & .inicial {
+        @apply my-[0.5%] mx-[10%];
     }
 
-    .containerMapa
-    {
+    & .textoHome {
+        @apply w-[50%];
+    }
+
+    & .botaoHome {
+        @apply rounded-[12px] bg-[#001B74] py-[15px] px-[25px] text-white cursor-pointer  flex items-center;
+    & h1 {
+        @apply mb-0;
+        }
+    }
+}
+
+    .txtOpcoes {
+    @apply my-[3rem] mx-[17%] leading-[1.2] text-[#1F1F1F] text-center;
+}
+
+    .opcaoPrincipal {
+    @apply flex justify-center items-center gap-[32px] mx-[5%] text-[1.2rem];
+
+    & button {
+        @apply bg-[#001B74] text-white rounded-[12px] p-[2%] w-[35%] max-w-[425px] h-[198px] max-h-[220px] cursor-pointer;
+    }
+
+    & h1 {
+        @apply text-[1.8rem] font-[600];
+    }
+
+    & p {
+        @apply text-[1.3rem] font-[300];
+    }
+}
+
+    .containerMapa {
         @apply my-[3%] flex bg-custom-gradient justify-between;
 
-        & .containerTxt
-        {
-            @apply flex flex-col items-center justify-center py-[2%] px-[6%] pl-[12%] text-white w-[50%]
-        }
+    & .containerTxt {
+        @apply flex flex-col items-center justify-center py-[2%] px-[6%] pl-[12%] text-white w-[50%];
+    }
+}
+
+    .containerGeral {
+    @apply flex flex-col justify-center items-center mx-[15%];
+
+    & .bannerContainer {
+        @apply flex justify-between  items-center rounded-[12px] bg-[#EBEBEB] text-[#1F1F1F] mb-[2rem];
+
+    & button {
+        @apply bg-[#0030AB] rounded-[15px] text-white text-center cursor-pointer w-[90%] leading-[1] mt-[15px] p-[4%] text-[1.8rem] font-[500];
     }
 
-    .containerGeral
-    {
-        @apply flex flex-col justify-center items-center mx-[15%];
-
-        & .bannerContainer
-        {
-            @apply flex justify-between  items-center rounded-[12px] bg-[#EBEBEB] text-[#1F1F1F] mb-[2rem];
-
-            & button
-            {
-                @apply bg-[#0030AB] rounded-[15px] text-white text-center cursor-pointer w-[90%] leading-[1] mt-[15px] p-[4%] text-[1.8rem] font-[500];
-            }
-
-            & .bannerTxt
-            {
-                @apply w-[80%] py-[2%] px-[5%];
-            }
-        }
-
-        & .bannerImg
-        {
-            @apply w-[30%] rounded-[12px];
-        }
+    & .bannerTxt {
+        @apply w-[80%] py-[2%] px-[5%];
+    }
     }
 
-    .cardsContainer
-    {
+    & .bannerImg {
+        @apply w-[30%] rounded-[12px];
+    }
+}
+
+    .cardsContainer {
         @apply flex justify-center items-center gap-[32px] my-[2rem];
 
-        
+    & .card {
+        @apply flex flex-col justify-center items-center w-[30%] h-[100%] bg-[#001B74] text-white text-center rounded-[12px] pb-[3%];
 
-        & .card
-        {
-            @apply flex flex-col justify-center items-center w-[30%] h-[100%] bg-[#001B74] text-white text-center rounded-[12px] pb-[3%];
-            
-            & .imagemCard
-            {
-                @apply w-[100%] h-[100%] rounded-[12px] mb-[5%];
-            }
-
-            & h1
-            {
-                @apply text-[2rem];
-            }
-
-            & p
-            {
-                @apply text-[1.3rem] font-[300];
-            }
-        }
+    & .imagemCard {
+        @apply w-[100%] h-[100%] rounded-[12px] mb-[5%];
     }
 
-    /* LOGIN */ 
+    & h1 {
+        @apply text-[2rem];
+    }
 
-    .cadastroGeral
-    {
-        @apply flex h-[90vh];
+    & p {
+        @apply text-[1.3rem] font-[300];
+    }
+    }
+}
 
-        & .containerImg
-        {
-            @apply h-[100%] w-[50%];
+  /* LOGIN */
 
-            & .img-login
-            {
-                @apply w-[100%] h-[100%];
-            }
+.cadastroGeral {
+    @apply flex h-[90vh];
 
-        }
+    & .containerImg {
+    @apply h-[100%] w-[50%];
 
-        & .containerExternoForm
-        {
-            @apply flex justify-center items-center h-[100%] py-[2%] px-[5%] bg-gradient-to-r from-[#0c2f88] via-[#082770] to-[#020848]  w-[100%];
+    & .img-login {
+        @apply w-[100%] h-[100%];
+    }
+    }
 
-            & .containerForm
-            {
-                @apply w-[50%] py-[10%] px-[5%] text-white flex flex-col items-center  h-[100%] rounded-[12px] bg-gradient-to-r from-[#082263] via-[#00154A] to-[#001345]  w-[100%];
+    & .containerExternoForm {
+        @apply flex justify-center items-center h-[100%] py-[2%] px-[5%] bg-gradient-to-r from-[#0c2f88] via-[#082770] to-[#020848]  w-[100%];
 
-                & .form
-                {
-                    @apply flex flex-col items-center w-[100%] gap-[32px] mb-[10%];
-                    & input
-                    {
-                        @apply w-[100%] py-[2%] px-[5%]  text-white text-[1.6rem] mb-[10%] bg-[rgba(255,0,0,0)] border-0 border-b-2 border-b-white;
-                    }
+    & .containerForm {
+        @apply w-[50%] py-[10%] px-[5%] text-white flex flex-col items-center  h-[100%] rounded-[12px] bg-gradient-to-r from-[#082263] via-[#00154A] to-[#001345]  w-[100%];
 
-                    & button
-                    {
-                        @apply px-[3%] py-[2.5%] text-white rounded-[20px] font-[1.7rem] font-[500] bg-blue-500 w-[40%] bg-gradient-to-r from-[#003c97] via-[#082770] to-[#020848] text-[1.5rem];
-                    }
+    & .form {
+        @apply flex flex-col items-center w-[100%] gap-[32px] mb-[10%];
+
+    & input {
+        @apply w-[100%] py-[2%] px-[5%]  text-white text-[1.6rem] mb-[10%] bg-[rgba(255,0,0,0)] border-0 border-b-2 border-b-white;
+    }
+
+    & button {
+        @apply px-[3%] py-[2.5%] text-white rounded-[20px] text-2xl bg-blue-500 w-[40%] bg-gradient-to-r from-[#003c97] via-[#082770] to-[#020848];
                 }
             }
         }
     }
+}
 
-    .linha
-    {
-        @apply flex gap-[40px] ;
+    .linha {
+        @apply flex gap-[40px];
+}
 
-       
+
+
+
+  /* CadastroVeiculo */
+
+
+
+.cadastroMain {
+    @apply flex max-h-[110vh];
     }
+
+    .cadastroImg {
+    @apply w-[40%];
+    }
+
+    .img-cad {
+    @apply w-full h-full;
+    }
+
+    .cadForm {
+    @apply w-[60%] py-[2%] px-[5%] bg-gradient-to-r from-[#0c2f88] via-[#082770] to-[#020848];
+
+    &   h1 {
+            @apply text-white text-center mb-0 text-[2.7rem];
+    }
+
+    &   .conteudo-cad {
+            @apply flex justify-center w-full pb-[5%];
+
+        &   p {
+                @apply text-white w-[70%] text-[1.2rem];
+        }
+    }
+}
 
     
 
+    .containerForm-cad {
+    @apply w-full px-[5%] pt-[5%] text-white flex-col items-center h-fit rounded-[12px] bg-black/50 ;
+    
+        &   h1 {
+            @apply text-center w-full font-[500] mb-[5%];
+    }
+}
+
+    
+    .form-cad {
+    @apply flex flex-col items-center w-full mb-[10%];
+    
+        & input {
+            @apply w-full border py-[2%] px-[5%] bg-transparent border-x-transparent border-t-transparent border-b-white text-white text-[1.5rem];
+
+        & .placa-cad {
+        @apply w-[80%] !important;
+        }
+
+        & .ano-cad {
+        @apply w-[40%] !important;
+        }
+    }
+
+    & .linhaContainer-cad {
+        @apply flex mb-8 gap-16;
+        & .linha-cad {
+            @apply w-1/2;
+            }
+        }
+}
+
+    .containerForm-cad button {
+    @apply py-[3%] px-[2%] mb-[8%]  text-white w-[45%] rounded-[20px] text-[1.5rem] font-[600] cursor-pointer
+    bg-gradient-to-r from-[#003c97] via-[#082770] to-[#000967] 
+    ;
+    }
+
+    @media (max-width: 991px) {
+    .containerImg {
+        @apply hidden;
+        }
+
+    .containerExternoForm {
+        @apply w-full;
+        }
+    }
+  /* CadastroVeiculo */
 
 
 }
+
+
+
+
