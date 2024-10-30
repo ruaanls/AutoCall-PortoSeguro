@@ -40,7 +40,7 @@ export default function CadastroVeiculo() {
                     </div>
 
                     <div className="containerForm-cad">
-                        <h1>Cadastro de veículo</h1>
+                        <h2>Cadastro de veículo</h2>
                         
                         <form className="form-cad">  
                             {/* onSubmit={handleSubmit} */}

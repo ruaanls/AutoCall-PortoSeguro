@@ -19,11 +19,8 @@ export default function Login() {
                         <form className="form">
                             <div className="linha">
                                 <input type="text" placeholder="CPF"   pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" className="cpf" />
-                                
-                            </div>
-                            <div className="linha" >
-                                <input type="password" placeholder="Senha"  />
-                                <p></p>
+
+                                <input type="password" placeholder="Senha"/>
                             </div>
                             <button type='submit'>Entrar</button>
                         </form>
