@@ -71,9 +71,10 @@ export default function Cadastro() {
                 <div className="cadastro-img-container">
                     <Image src={imgCad} alt="Imagem de um mecânico com camisa azul" className="cadastro-img" />
                 </div>
+
                 <div className="cadastro-form-container">
-                    <div className="cadastro-form-inner justify-normal w-[100%]">
-                        <h1 className="cadastro-title text-[2.3rem] mb-[3%]">Crie sua conta Porto</h1>
+                    <div className="conteiner-form-cad">
+                        <h1>Crie sua conta Porto</h1>
 
                         <form /*onSubmit={onSubmit(handleSubmit)}*/ className="cadastro-form">
                             <div className="cadastro-row">
@@ -106,8 +107,8 @@ export default function Cadastro() {
                                     <p>{/*errors.senha2?.message*/}</p>
                                 </div>
                             </div>
-                            <div className="cadastro-button-container text-center w-[100%]">
-                                <button type="submit" style={{ width: "50%" }} className="cadastro-button w-[100%] py-[20%]">Criar Conta</button>
+                            <div className="cadastro-button-container">
+                                <button type="submit" style={{ width: "50%" }} className="cadastro-button">Criar Conta</button>
                             </div>
                         </form>
                     </div>
