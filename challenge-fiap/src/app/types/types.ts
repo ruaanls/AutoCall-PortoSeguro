@@ -9,3 +9,14 @@ export type TipoAgendamento = {
         }
     }
 }
+
+export type TipoCadastroVeiculo = {
+    cpf:string,
+    veiculo:{
+        placa:string,
+        marca:string,
+        modelo:string,
+        ano:number,
+        renavam:string
+    }
+}
