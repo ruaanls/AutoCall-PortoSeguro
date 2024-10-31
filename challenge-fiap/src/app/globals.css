@@ -163,7 +163,50 @@ body {
 /* Cadastro */
 
 
+.cadastro-container {
+    @apply flex h-[90vh] max-h-[120vh];
+    & .conteiner-form-cad h1 {
+        @apply text-4xl text-center pb-[8%]
+    }
+}
 
+.cadastro-img-container {
+    @apply h-full min-w-fit;
+}
+
+
+
+.cadastro-img {
+    @apply w-full h-full;
+}
+
+.cadastro-form-container {
+    @apply flex justify-center items-center h-[100%] py-[2%] px-[5%] bg-gradient-to-r from-[#0c2f88] via-[#082770] to-[#020848] w-[100%];
+}
+
+.conteiner-form-cad {
+    @apply w-full px-[5%] pt-[15%] text-center text-white flex-col items-center h-fit rounded-[12px] bg-black/50;
+}
+
+.cadastro-form {
+    @apply flex flex-col items-center w-[100%] gap-[32px] mb-[10%];
+}
+
+.cadastro-row {
+    @apply flex gap-[40px] justify-center flex-row;
+}
+
+.cadastro-field input {
+    @apply w-[100%] py-[2%] px-[5%] text-white text-[1.6rem] mb-[10%] bg-[rgba(255,0,0,0)] border-0 border-b-2 border-b-white;
+}
+
+.cadastro-button-container {
+    @apply w-full text-center;
+}
+
+.cadastro-button {
+    @apply px-[3%] py-[2.5%] text-white rounded-[20px] text-2xl bg-blue-500 w-[40%] bg-gradient-to-r from-[#003c97] via-[#082770] to-[#020848];
+}
 
 
 /* Cadastro */
