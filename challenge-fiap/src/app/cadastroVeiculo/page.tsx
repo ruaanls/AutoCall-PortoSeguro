@@ -20,7 +20,9 @@ export default function CadastroVeiculo() {
         }
      });
 
-     const [dadosResposta, setDadosResposta] = useState<any>(null);
+     const [dadosResposta, setDadosResposta] = useState<TipoCadastroVeiculo>();
+
+     
 
      
      const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -49,8 +51,7 @@ export default function CadastroVeiculo() {
                 if (resposta.ok) {
                     alert("PASSOU!!!! API DEU CERTO");
                     const dados = await resposta.json(); // Pegando os dados da resposta
-                    setDadosResposta(dados); // Guardando os dados no estado
-                    alert(dadosResposta)
+                    setDadosResposta(dados);
                     setCadastroVeiculo({cpf:"",
                         veiculo:{
                             placa:"",
@@ -80,7 +81,8 @@ export default function CadastroVeiculo() {
             <div className="cadastroMain">
                 <div className="cadForm">
                     <h1>Cadastre seu Veículo</h1>
-                    <h1>{dadosResposta}</h1>
+                    <h1>{dadosResposta?.cpf}</h1>
+                    <h1>{dadosResposta?.veiculo.ano}</h1>
                     
                     <div className="conteudo-cad">
                         <p>

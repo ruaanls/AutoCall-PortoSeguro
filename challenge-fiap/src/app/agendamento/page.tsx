@@ -113,7 +113,7 @@ export default function Agendamento() {
                 </div>
                 <div>
                     <label htmlFor='idHora'>Hora do Agendamento</label>
-                    <input type="text" name='HORA_AGENDAMENTO' id='idHora' value={agendamento.agendamento.horario} placeholder='Digite oo horário do agendamento' required onChange={(evento)=> handleChange(evento)}/>
+                    <input type="time" name='HORA_AGENDAMENTO' id='idHora' value={agendamento.agendamento.horario} placeholder='Digite oo horário do agendamento' required onChange={(evento)=> handleChange(evento)}/>
                 </div>
                 <div>
                     <label htmlFor='idPlaca'>Placa</label>
