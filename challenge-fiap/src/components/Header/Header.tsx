@@ -20,7 +20,7 @@ export default function Header() {
             <nav className="menu">
                 <Link href={"/agendamento"}><p>Agendar</p></Link>
                 <Link href={"/cadastroVeiculo"}><p>Cadastrar Veículo</p></Link>
-                <Link href={"/manutencao"}><p>Integrantes</p></Link>
+                <Link href={"/integrantes"}><p>Integrantes</p></Link>
             </nav>
             <div className="loginHeader">
                 <button className="botao"><Link href={"/cadastro"}><p>Abra sua Conta</p></Link></button>
