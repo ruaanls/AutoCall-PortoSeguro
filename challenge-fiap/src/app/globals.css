@@ -57,7 +57,18 @@ body {
     }
 }
 
-  /* Página Inicial */
+        /* Alteracao tanto Header / Footer  */
+/* ------------------------------------------------ */
+
+
+
+
+
+
+/* ----------------------------- */
+        /* Página Inicial */
+
+
     .containerInicio {
         @apply h-[70vh] w-[100%] bg-slate-500 flex items-center bg-[url('/img/img-fundo-inicio.png')] bg-cover bg-center;
 
@@ -155,12 +166,18 @@ body {
 
 
 
-/* Pagina Inicial */
+        /* Pagina Inicial */
+/* ----------------------------- */
 
 
 
 
-/* Cadastro */
+
+
+
+
+/* ------------------------ */
+        /* Cadastro */
 
 
 .cadastro-container {
@@ -209,13 +226,19 @@ body {
 }
 
 
-/* Cadastro */
+        /* Cadastro */
+/* ------------------------ */
 
 
 
 
 
-/* LOGIN */
+
+
+
+
+/* ------------------------ */
+        /* LOGIN */
 
 
 .cadastroGeral {
@@ -255,12 +278,18 @@ body {
 }
 
 
-    /* LOGIN */
+        /* LOGIN */
+/* ------------------------ */
 
 
 
 
 
+
+
+
+
+/* ------------------------ */
   /* CadastroVeiculo */
 
 
@@ -342,11 +371,18 @@ body {
         @apply w-full;
         }
     }
-  /* CadastroVeiculo */
+    /* CadastroVeiculo */
+/* ------------------------ */
 
 
 
-  /* Integrantes */
+
+
+
+
+
+/* ---------------------- */
+    /* Integrantes */
     
     .sectionIntegrante{
         @apply flex flex-col items-center w-full bg-slate-950;
@@ -376,24 +412,119 @@ body {
 }
 
 
-  /* Integrantes */
+    /* Integrantes */
+/* ---------------------- */
 
+
+
+
+
+
+
+
+
+/* ----------------- */
+  /* Agendamento */
+
+
+
+.agendamento-container {
+    @apply flex justify-center items-center text-white min-h-screen bg-gradient-to-r from-[#0c2f88] via-[#082770] to-[#020848];
+}
+
+.form-container-agenda {
+    @apply bg-black/70 shadow-lg rounded-lg p-8 max-w-md w-[full] mx-auto;
+& h1 {
+    @apply text-2xl font-semibold text-center mb-6;
+}
+
+}
+
+.form-title {
+    @apply text-2xl font-semibold text-center mb-6;
+}
+
+.input-field {
+    @apply w-full border border-slate-800 bg-slate-800 rounded p-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.submit-button {
+    @apply w-full bg-blue-500 py-2 rounded hover:bg-blue-600 transition duration-300;
+}
 
 
 
 
   /* Agendamento */
+/* ----------------- */
 
 
 
 
-  /* Agendamento */
 
+
+
+
+
+
+/* ----------------- */
+    /* Chatbot */
+
+
+.chatbot-container {
+    @apply fixed bottom-4 right-4;
+}
+
+.chatbot-icon {
+    @apply bg-blue-500 text-white rounded-full p-3 shadow-lg hover:bg-blue-600 transition duration-300;
+}
+
+.chatbot-box {
+    @apply flex flex-col justify-between w-80 h-96 bg-white rounded-lg shadow-lg p-4 mt-2;
+}
+
+.chatbot-close {
+    @apply text-gray-600 hover:text-gray-800 transition duration-300;
+}
+
+.chatbot-messages {
+    @apply flex-1 overflow-y-auto mb-4;
+}
+
+.chatbot-message {
+    @apply mb-2;
+}
+
+.user-message {
+    @apply text-blue-600 font-semibold;
+}
+
+.bot-message {
+    @apply text-gray-800;
+}
+
+.chatbot-form {
+    @apply flex items-center;
+}
+
+.chatbot-input {
+    @apply flex-1 border border-gray-300 rounded p-2 mr-2;
+
+    
+    
+}
+.chatbot-send {
+    @apply bg-blue-500 text-white rounded p-2;
+}
+
+
+
+    /* Chatbot */
+/* ----------------- */
 
 
 
 }
-
 
 
 
