@@ -1,37 +1,88 @@
 // import React, { useState } from 'react';
-
+"use client"
 import Image from 'next/image';
 import imgLogin from '@/img/img-cadastro-veiculos.png';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation'
+import { TipoCadastroVeiculo } from '../types/types';
 
 export default function CadastroVeiculo() {
-    // const [formData, setFormData] = useState({
-    //     placa: '',
-    //     marca: '',
-    //     modelo: '',
-    //     ano: ''
-    // });
+    const navigate = useRouter();
+    const [cadastroVeiculo, setCadastroVeiculo] = useState<TipoCadastroVeiculo>({
+        cpf:"",
+        veiculo:{
+            placa:"",
+            marca:"",
+            modelo:"",
+            ano:0,
+            renavam:"",
+            
+        }
+     });
 
-    // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    //     const { name, value } = e.target;
-    //     setFormData(prevState => ({
-    //         ...prevState,
-    //         [name]: value
-    //     }));
-    // };
+     const [dadosResposta, setDadosResposta] = useState<TipoCadastroVeiculo>();
 
-    // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    //     e.preventDefault();
-    //     console.log(formData);
-    //     
-    // // bota tua api do java aqui ruanzito (na teoria funfa)
-    // // ou arruma pra encaixar nao sei exatamente como voce fez
-    // };
+     
+
+     
+     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setCadastroVeiculo((prevState) => ({
+            ...prevState,
+            veiculo: {
+                ...prevState.veiculo,
+                [name.toLowerCase()]: name === 'ANO' ? Number(value) : value
+            },
+            cpf: name === 'T_CLIENTE_CPF' ? value : prevState.cpf
+        }));
+     };
+
+     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+         e.preventDefault();
+         try{
+                const resposta = await fetch("http://localhost:8080/apiJava/cadastroVeiculo",{
+                    method: "POST",
+                    headers:{
+                        "Content-Type":"application/json"
+                    },
+                    body:JSON.stringify(cadastroVeiculo)
+                })
+                
+                if (resposta.ok) {
+                    alert("PASSOU!!!! API DEU CERTO");
+                    const dados = await resposta.json(); // Pegando os dados da resposta
+                    setDadosResposta(dados);
+                    setCadastroVeiculo({cpf:"",
+                        veiculo:{
+                            placa:"",
+                            marca:"",
+                            modelo:"",
+                            ano:0,
+                            renavam:"",
+                            
+                        }})
+                        
+                    
+                    
+                }
+
+            }
+            catch(error)
+            {
+                alert("DEU ERRADO :/ "+ error);
+            }
+
+         
+    
+    }
 
     return (
         <main>
             <div className="cadastroMain">
                 <div className="cadForm">
                     <h1>Cadastre seu Veículo</h1>
+                    <h1>{dadosResposta?.cpf}</h1>
+                    <h1>{dadosResposta?.veiculo.ano}</h1>
                     
                     <div className="conteudo-cad">
                         <p>
@@ -42,15 +93,15 @@ export default function CadastroVeiculo() {
                     <div className="containerForm-cad">
                         <h2>Cadastro de veículo</h2>
                         
-                        <form className="form-cad">  
-                            {/* onSubmit={handleSubmit} */}
+                        <form className="form-cad" onSubmit={handleSubmit}>  
+                            
                             <div className="linhaContainer-cad">
                                 <div className="linha-cad">
                                     <input 
                                         type="text" 
-                                        name="placa"
-                                        // value={formData.placa}
-                                        // onChange={handleChange}
+                                        name="PLACA"
+                                        value={cadastroVeiculo.veiculo.placa}
+                                        onChange={(evento)=> handleChange(evento)}
                                         placeholder="Placa" 
                                         className="placa-cad"
                                         pattern="^(?:[A-Z]{3}-\d{4}|[A-Z]{3}[0-9][0-9A-Z][0-9]{2})$"
@@ -60,9 +111,9 @@ export default function CadastroVeiculo() {
                                 <div className="linha-cad">
                                     <input 
                                         type="text" 
-                                        name="marca"
-                                        // value={formData.marca}
-                                        // onChange={handleChange}
+                                        name="MARCA"
+                                        value={cadastroVeiculo.veiculo.marca}
+                                        onChange={(evento)=> handleChange(evento)}
                                         placeholder="Marca"
                                         required
                                     />
@@ -73,9 +124,9 @@ export default function CadastroVeiculo() {
                                 <div className="linha-cad">
                                     <input 
                                         type="text" 
-                                        name="modelo"
-                                        // value={formData.modelo}
-                                        // onChange={handleChange}
+                                        name="MODELO"
+                                        value={cadastroVeiculo.veiculo.modelo}
+                                        onChange={(evento)=> handleChange(evento)}
                                         placeholder="Modelo"
                                         required
                                     />
@@ -84,9 +135,9 @@ export default function CadastroVeiculo() {
                                 <div className="linha-cad">
                                     <input 
                                         type="text" 
-                                        name="ano"
-                                        // value={formData.ano}
-                                        // onChange={handleChange}
+                                        name="ANO"
+                                        value={cadastroVeiculo.veiculo.ano}
+                                        onChange={(evento)=> handleChange(evento)}
                                         placeholder="Ano"
                                         pattern="[0-9]+$"
                                         className="ano-cad"
@@ -95,11 +146,37 @@ export default function CadastroVeiculo() {
                                 </div>
                             </div>
 
+                            <div className="linhaContainer-cad">
+                                <div className="linha-cad">
+                                    <input 
+                                        type="text" 
+                                        name="RENAVAM"
+                                        value={cadastroVeiculo.veiculo.renavam}
+                                        onChange={(evento)=> handleChange(evento)}
+                                        placeholder="Renavam"
+                                        required
+                                    />
+                                </div>
+                                <div className="linha-cad">
+                                    <input 
+                                        type="text" 
+                                        name="T_CLIENTE_CPF"
+                                        value={cadastroVeiculo.cpf}
+                                        onChange={(evento)=> handleChange(evento)}
+                                        placeholder="CPF"
+                                        required
+                                    />
+                                </div>
+
+                              
+                            </div>
+
                             <button type="submit">
                                 Cadastrar Veículo
                             </button>
                         </form>
                     </div>
+
                 </div>
             <div className="cadastroImg">
                 <Image 

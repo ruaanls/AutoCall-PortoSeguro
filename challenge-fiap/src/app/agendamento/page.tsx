@@ -170,6 +170,5 @@ export default function Agendamento() {
                     <button type="submit" className="submit-button">Agendar</button>
                 </form>
             </div>
-        </div>
     );
 }
