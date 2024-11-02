@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import Chatbot from  "../components/Chatbot/Chatbot"; 
 import './globals.css';
 
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body>
         <Header/>
         {children}
+        <Chatbot/>
         <Footer/>
       </body>
     </html>
