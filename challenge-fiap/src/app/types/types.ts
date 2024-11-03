@@ -20,3 +20,16 @@ export type TipoCadastroVeiculo = {
         renavam:string
     }
 }
+
+export type TipoCentroAutomotivo = {
+    cod:number,
+    endereco:{
+        bairro:string,
+        cep:string,
+        cidade:string,
+        logradouro:string,
+        numero:number,
+        uf:string
+    },
+    id:number
+}

@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from 'react';
-import axios from 'axios';
-import { FaComments, FaTimes } from 'react-icons/fa'; // Ícone de fechar
+/*import axios from 'axios';*/
+import { FaComments, FaTimes } from 'react-icons/fa'; 
 
 const Chatbot: React.FC = () => {
     const [input, setInput] = useState('');
@@ -13,7 +13,7 @@ const Chatbot: React.FC = () => {
         e.preventDefault();
         setMessages((prev) => [...prev, { user: input, bot: '' }]);
 
-        try {
+        /*try {
             const response = await axios.post('/api/chat', { message: input });
             const botResponse = response.data.response;
 
@@ -24,7 +24,7 @@ const Chatbot: React.FC = () => {
             );
         } catch (error) {
             console.error('Erro ao enviar a mensagem:', error);
-        }
+        }*/
 
         setInput('');
     };
