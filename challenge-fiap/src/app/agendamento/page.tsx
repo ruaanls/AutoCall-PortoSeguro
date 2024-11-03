@@ -1,6 +1,6 @@
 "use client"
-import React, { useState } from 'react'
-import { TipoAgendamento } from '../types/types'
+import React, { useEffect, useState } from 'react'
+import { TipoAgendamento, TipoCentroAutomotivo } from '../types/types'
 import { useRouter } from 'next/navigation'
 
 export default function Agendamento() {
@@ -17,6 +17,25 @@ export default function Agendamento() {
             }
         }
     })
+
+    const [centrosAutomotivos, setcentrosAutomotivos] = useState<TipoCentroAutomotivo[]>([])
+
+    useEffect(() => {
+        const fetchCentrosAutomotivos = async () => {
+            try {
+                const resposta = await fetch("http://localhost:8080/apiJava/recuperaCA", { method: "GET" });
+                const data = await resposta.json();
+                
+                setcentrosAutomotivos(data)
+                alert("DEU CERTO")
+            } 
+            catch (error) {
+                alert("Erro ao buscar centros automotivos:" + error);
+            }
+        };
+
+        fetchCentrosAutomotivos(); // Executa ao carregar o componente
+    }, []);
 
     const handleChange = (evento: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = evento.target;
@@ -62,6 +81,8 @@ export default function Agendamento() {
                 }
             });
         }
+
+        
     }
 
     const handleSubmit = async(evento:React.FormEvent<HTMLFormElement>)=>{
@@ -76,7 +97,7 @@ export default function Agendamento() {
             })
 
             if (resposta.ok) {
-                alert("PASSOU!!!! API DEU CERTO");
+                
                 setagendamento({ placa:"",
                     agendamento:{
                         tipoProblema:"",
@@ -155,20 +176,41 @@ export default function Agendamento() {
                         />
                     </div>
                     <div>
-                        <label htmlFor="idCentro">ID do Centro Automotivo</label>
-                        <input
-                            type="text"
+                        <label htmlFor="idCentro">Centro Automotivo</label>
+                        <select
                             name="T_CENTRO_AUTOMOTIVO_ID_CA"
                             id="idCentro"
+                            
                             value={agendamento.agendamento.centroAutomotivo.id}
-                            placeholder="Digite o ID do centro automotivo"
                             required
-                            onChange={handleChange}
+                            onChange={(evento) => {
+                                const selectedId = parseInt(evento.target.value);
+                                alert(selectedId)
+                                setagendamento({
+                                    ...agendamento,
+                                    agendamento: {
+                                        ...agendamento.agendamento,
+                                        centroAutomotivo: {
+                                            ...agendamento.agendamento.centroAutomotivo,
+                                            id: selectedId
+                                        }
+                                    }
+                                });
+                            }}
                             className="input-field"
-                        />
+                        >
+                            <option value="" disabled>Selecione um Centro Automotivo</option>
+                            {centrosAutomotivos.map((centro: TipoCentroAutomotivo) => (
+                                <option key={centro.id} value={centro.id}>
+                                    {centro.endereco.logradouro + " - " + centro.endereco.cidade}
+                                </option>
+                            ))}
+                        </select>
                     </div>
+
                     <button type="submit" className="submit-button">Agendar</button>
                 </form>
             </div>
+        </div>
     );
 }
