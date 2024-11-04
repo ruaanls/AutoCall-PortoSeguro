@@ -724,7 +724,30 @@ body {
         }
     }
 }
+@media (min-width: 1213px) and (max-width: 1440px){
 
+    .cardsContainer {
+        @apply flex justify-center items-center gap-[32px] my-[2rem];
+    
+    & .card {
+        @apply flex flex-col justify-center items-center w-[30%] h-[100%] bg-[#001B74] text-white text-center rounded-[12px] pb-[3%];
+    
+    & .imagemCard {
+        @apply w-[100%] h-[100%] rounded-[12px] mb-[5%];
+    }
+    
+    & h2 {
+        @apply text-[1.5rem];
+    }
+    
+    & p {
+        @apply text-[1rem] ;
+            }
+        }
+    }
+}
+
+}
 
 
         /* Pagina Inicial */
