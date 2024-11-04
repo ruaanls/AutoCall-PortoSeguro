@@ -570,6 +570,27 @@ body {
 }
     }
 }
+@media (min-width: 786px) and (max-width: 961px) {
+
+
+    .containerMapa{
+        @apply flex flex-col justify-center items-center gap-[32px];
+    & .containerTxt{
+        @apply flex flex-col justify-center w-full items-center gap-[32px];
+    & h2{
+        @apply pt-20 text-[1.7rem] text-white;
+    }
+    & p {
+        @apply text-[1.2rem] text-white w-4/5 pb-12;
+    }
+    }
+    & .mapa{ 
+        @apply pb-14;
+    & iframe{
+        @apply w-[620px] h-[460px] ;
+    }
+    }
+}
 
 
 
