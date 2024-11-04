@@ -24,7 +24,7 @@ export default function Login() {
         console.log("Dados enviados:", login); // Verificar os dados enviados
 
         try {
-            const resposta = await fetch("https://localhost:5000/login", {
+            const resposta = await fetch("http://localhost:5000/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

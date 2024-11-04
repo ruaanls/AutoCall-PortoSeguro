@@ -34,6 +34,13 @@ export type TipoCentroAutomotivo = {
     id:number
 }
 
+export type TipoCadastro = {
+    cpf:string,
+    nome:string,
+    email:string,
+    cep:string,
+    senha:string
+}
 
 
 
