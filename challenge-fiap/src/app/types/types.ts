@@ -33,3 +33,11 @@ export type TipoCentroAutomotivo = {
     },
     id:number
 }
+
+
+
+
+export type TipoLogin = {
+    cpf:string,
+    senha:string
+}
