@@ -263,6 +263,23 @@ body {
             @apply text-[1rem] text-white text-center;
         }
     }
+    .containerMapa{
+        @apply flex flex-col justify-center items-center gap-[32px];
+    & .containerTxt{
+        @apply flex flex-col justify-center w-full items-center gap-[32px];
+    & h2{
+        @apply pt-20 text-[1.7rem] text-white;
+    }
+    & p {
+        @apply text-[1.2rem] text-white w-4/5 pb-12;
+    }
+    }
+    & .mapa{
+        @apply mx-0 mb-8; 
+    & iframe{
+        @apply w-[370px] h-[340px] ;
+    }
+}
 
         /* Pagina Inicial */
 /* ----------------------------- */
