@@ -387,6 +387,47 @@ body {
         @apply w-[570px] h-[460px] ;
     }
 }
+.containerGeral{
+    @apply flex flex-col justify-center items-center gap-[32px];
+    .bannerContainer{
+        @apply flex flex-col justify-center items-center mt-20 gap-[32px];
+        .bannerTxt{
+            @apply text-[1.5rem] text-white text-center w-full mt-10;
+            & h2{
+                @apply text-[1.7rem] text-black;
+        }
+        & p{
+            @apply text-[1.2rem] text-black py-6;
+        }
+        & button {
+            @apply justify-center;
+            & h2{
+                @apply text-[1.2rem] p-2 text-white;
+            }
+        }
+    }
+    & .bannerImg{
+        @apply w-full;
+    }
+    }
+    & .cardsContainer{
+        @apply flex flex-col justify-center items-center gap-[32px];
+    & .card {
+        @apply w-full justify-center;
+    & h2 {
+        @apply text-[1.5rem] text-white pt-5;
+    }
+    & p {
+        @apply text-[1.2rem] text-white py-10;
+    }
+    & .imagemCard {
+        @apply w-[fit] h-[35vh];
+    }
+    }
+
+}
+    }
+}
 
 
         /* Pagina Inicial */
