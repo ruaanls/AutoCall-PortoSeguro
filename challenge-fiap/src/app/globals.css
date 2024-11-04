@@ -242,6 +242,27 @@ body {
         }
 
     }
+    .txtOpcoes{
+        @apply text-slate-950;
+        & h2{
+            @apply text-[1.4rem] ;
+        }
+        & p{
+            @apply text-[1.1rem] text-slate-950;
+            }
+    }
+    .opcaoPrincipal{
+        @apply flex flex-col justify-center align-middle mb-20 gap-[40px];
+        & button{
+            @apply w-full pt-[100px] pb-[200px] justify-center;
+        }
+        & h2 {
+            @apply text-[1.5rem] text-white text-center;
+        }
+        & p{
+            @apply text-[1rem] text-white text-center;
+        }
+    }
 
         /* Pagina Inicial */
 /* ----------------------------- */
