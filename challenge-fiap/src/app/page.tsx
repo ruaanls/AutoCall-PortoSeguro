@@ -3,6 +3,7 @@ import img from "../img/img-banner.png";
 import bateria from "../img/img-bateria.png";
 import revisao from "../img/img-revisao.png";
 import oleo from "../img/img-troca-oleo.png";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import teste from "../img/img-fundo-inicio.png";
 import Image from "next/image";
 
@@ -27,7 +28,7 @@ export default function PaginaInicial() {
           </p>
           <button className="botaoHome">
             <Link href={"/manutencao"}>
-              <h1>Agende um serviço</h1>
+              <h2>Agende um serviço</h2>
             </Link>
           </button>
         </div>
@@ -35,8 +36,8 @@ export default function PaginaInicial() {
 
       <div>
         <div className="txtOpcoes">
-          <h1 className="text-[2.7rem]">O que você quer fazer hoje?</h1>
-          <p className="text-[2rem] font-[300]">
+          <h2>O que você quer fazer hoje?</h2>
+          <p>
             Resolva as questões referentes ao seu veículo
           </p>
         </div>
@@ -44,7 +45,7 @@ export default function PaginaInicial() {
         <div className="opcaoPrincipal">
           <button>
             <Link href={"/manutencao"}>
-              <h1>Marcar Conserto</h1>
+              <h2>Marcar Conserto</h2>
               <p>
                 Agende uma visita para consertar ou realizar pequenos reparos no
                 seu veículo
@@ -53,13 +54,13 @@ export default function PaginaInicial() {
           </button>
           <button>
             <Link href={"/manutencao"}>
-              <h1>Realizar pré-diagnóstico</h1>
+              <h2>Realizar pré-diagnóstico</h2>
               <p>Use nossa IA para ter um pré-diagnóstico e pré-orçamento</p>
             </Link>
           </button>
           <button>
             <Link href={"/cadastroVeiculo"}>
-              <h1>Cadastrar Veículos</h1>
+              <h2>Cadastrar Veículos</h2>
               <p>
                 Cadastre o seu veículo para usar nossas outras funcionalidades
               </p>
@@ -69,11 +70,11 @@ export default function PaginaInicial() {
 
         <div className="containerMapa">
           <div className="containerTxt">
-            <h1 className="text-[2.8rem] leading-[1.3] mb-[1rem]">
+            <h2 className="text-[2.8rem] leading-[1.3] mb-[1rem]">
               Encontre o{" "}
               <span className="bg-[#0076FC] p-[5px]">centro automotivo</span>{" "}
               mais próximo de você.
-            </h1>
+            </h2>
             <p className="text-[1.3rem] font-[300]">
               Possuímos centros automotivos e oficinas credenciadas em toda
               grande São Paulo, confira no mapa ao lado.
@@ -90,42 +91,42 @@ export default function PaginaInicial() {
         <div className="containerGeral">
           <div className="bannerContainer">
             <div className="bannerTxt">
-              <h1 className="text-[2.3rem] text-[#1F1F1F] mx-[15px] font-[500]">
+              <h2 className="text-[2.3rem] text-[#1F1F1F] mx-[15px] font-[500]">
                 Tenha um <span>pré-diagnóstico</span> do seu problema com{" "}
                 <span>orçamento</span> agora.
-              </h1>
+              </h2>
               <p className="text-[1.4rem] mx-[20px]">
                 Conte com o nosso assistente virtual para ter um pré-diagnóstico
                 com pré-orçamento
               </p>
               <button>
                 <Link href={"/manutencao"}>
-                  <h1>Fazer pré-análise agora.</h1>
+                  <h2>Fazer pré-análise agora.</h2>
                 </Link>
               </button>
             </div>
             <Image src={img} alt="Teste" className="bannerImg" />
           </div>
 
-          <h1 className="w-[100%] text-center text-[#1F1F1F] m-[10px] text-[1.9rem] font-[500]">
+          <h2 className="w-[100%] text-center text-[#1F1F1F] m-[10px] text-[1.9rem] font-[500]">
             Conheça alguns de nossos serviços
-          </h1>
+          </h2>
           <div className="cardsContainer">
             <div className="card">
               <Image src={oleo} alt="Teste" className="imagemCard" />
-              <h1 className="text-[2rem]">Troca de Óleo</h1>
+              <h2 className="text-[2rem]">Troca de Óleo</h2>
               <p className="text-[1.3rem] font-[300]">
                 Troca de óleo, lubrificação e freios
               </p>
             </div>
             <div className="card">
               <Image src={revisao} alt="Teste" className="imagemCard" />
-              <h1>Revisão Geral</h1>
+              <h2>Revisão Geral</h2>
               <p>Revisão completa para você viajar com segurança</p>
             </div>
             <div className="card">
               <Image src={bateria} alt="Teste" className="imagemCard" />
-              <h1>Troca de Baterias</h1>
+              <h2>Troca de Baterias</h2>
               <p>Troca de baterias e demais serviços elétricos</p>
             </div>
           </div>

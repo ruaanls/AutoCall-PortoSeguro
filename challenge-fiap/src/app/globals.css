@@ -55,7 +55,58 @@ body {
     & h1 {
         @apply text-3xl font-normal;
     }
+    
 }
+
+    @media (min-width: 645px) and (max-width: 731px) {
+    .menu {
+        &   p {
+                    @apply text-[0.8rem];
+                }
+            }
+
+    .loginHeader {
+        .botao{
+            @apply border py-0 px-5 w-full;
+            & p{
+                @apply text-[0.5em];
+        }
+    }
+        & .Login-button p{
+            @apply text-[0.8em] text-white;
+            }
+    }
+}
+
+    @media (min-width: 732px) and (max-width: 911px) {
+    .menu {
+        &   p {
+                    @apply text-[1rem];
+                }
+            }
+
+    .loginHeader {
+        .botao{
+            @apply border py-0 px-5;
+            & p{
+                @apply text-[0.6em];
+        }
+    }
+        & .Login-button p{
+            @apply text-[1em] text-white;
+            }
+    }
+}
+
+
+    @media (min-width: 917px) and (max-width: 1249px) {
+    .loginHeader {
+    & .botao p{
+        @apply text-[0.8em];
+        }
+    }
+}
+
 
         /* Alteracao tanto Header / Footer  */
 /* ------------------------------------------------ */
@@ -164,6 +215,539 @@ body {
     }
 }
 
+@media (min-width: 380px) and (max-width: 570px) {
+    .containerInicio{
+        @apply flex flex-col justify-center items-center gap-[32px] h-[45vh];
+
+        & .inicial{
+            @apply text-red-600;
+        & h1{
+            @apply text-[1.2rem];
+        }
+        & p{
+            @apply text-[1.6rem];
+        }
+        & span{
+            @apply text-[1.2rem] p-[1.8px];
+        }
+        & .textoHome{
+            @apply text-[1.2rem] w-[70%];
+        }
+        & .botaoHome {
+            @apply text-[1rem];
+        & Link {
+            @apply text-[1rem] ;
+        }
+        }
+        }
+
+    }
+    .txtOpcoes{
+        @apply text-slate-950;
+        & h2{
+            @apply text-[1.4rem] ;
+        }
+        & p{
+            @apply text-[1.1rem] text-slate-950;
+            }
+    }
+    .opcaoPrincipal{
+        @apply flex flex-col justify-center align-middle mb-20 gap-[40px];
+        & button{
+            @apply w-full pt-[100px] pb-[200px] justify-center;
+        }
+        & h2 {
+            @apply text-[1.5rem] text-white text-center;
+        }
+        & p{
+            @apply text-[1rem] text-white text-center;
+        }
+    }
+    .containerMapa{
+        @apply flex flex-col justify-center items-center gap-[32px];
+    & .containerTxt{
+        @apply flex flex-col justify-center w-full items-center gap-[32px];
+    & h2{
+        @apply pt-20 text-[1.7rem] text-white;
+    }
+    & p {
+        @apply text-[1.2rem] text-white w-4/5 pb-12;
+    }
+    }
+    & .mapa{
+        @apply mx-0 mb-8; 
+    & iframe{
+        @apply w-[370px] h-[340px] ;
+    }
+}
+}
+.containerGeral{
+    @apply flex flex-col justify-center items-center mx-4 gap-[32px];
+    .bannerContainer{
+        @apply flex flex-col justify-center items-center mt-20 gap-[32px];
+        .bannerTxt{
+            @apply text-[1.5rem] text-white text-center w-full  mt-10;
+            & h2{
+                @apply text-[1.7rem] text-black;
+        }
+        & p{
+            @apply text-[1.2rem] text-black py-6;
+        }
+        & button {
+            @apply justify-center;
+            & h2{
+                @apply text-[1.2rem] p-2 text-white;
+            }
+        }
+    }
+    & .bannerImg{
+        @apply w-full;
+    }
+    }
+    & .cardsContainer{
+        @apply flex flex-col justify-center items-center gap-[32px];
+    & .card {
+        @apply w-full justify-center;
+    & h2 {
+        @apply text-[1.5rem] text-white pt-5;
+    }
+    & p {
+        @apply text-[1.2rem] text-white py-10 px-4;
+    }
+    & .imagemCard {
+        @apply w-[fit] h-[35vh];
+    }
+    }
+
+}
+    }
+}
+@media (min-width: 571px) and (max-width: 640px) {
+
+    .containerInicio{
+        @apply flex flex-col justify-center items-center gap-[32px] h-[45vh];
+
+        & .inicial{
+            @apply text-red-600;
+        & h1{
+            @apply text-[1.2rem];
+        }
+        & p{
+            @apply text-[1.6rem];
+        }
+        & span{
+            @apply text-[1.2rem];
+        }
+        & .textoHome{
+            @apply text-[1.2rem] w-[70%];
+        }
+        & .botaoHome {
+            @apply text-[1rem];
+        & Link {
+            @apply text-[1rem] ;
+        }
+        }
+        }
+
+    }
+    .txtOpcoes{
+        @apply text-slate-950;
+        & h2{
+            @apply text-[1.5rem] ;
+        }
+        & p{
+            @apply text-[1.2rem] text-slate-950;
+            }
+    }
+    .opcaoPrincipal{
+        @apply flex flex-col justify-center align-middle mb-20 gap-[40px];
+        & button{
+            @apply w-full pt-[100px] pb-[200px] justify-center;
+        }
+        & h2 {
+            @apply text-[1.5rem] text-white text-center;
+        }
+        & p{
+            @apply text-[1rem] text-white text-center;
+        }
+    }
+
+    .containerMapa{
+        @apply flex flex-col justify-center items-center gap-[32px];
+    & .containerTxt{
+        @apply flex flex-col justify-center w-full items-center gap-[32px];
+    & h2{
+        @apply pt-20 text-[1.7rem] text-white;
+    }
+    & p {
+        @apply text-[1.2rem] text-white w-4/5 pb-12;
+    }
+    }
+    & .mapa iframe{
+        @apply w-[570px] h-[460px] ;
+    }
+}
+.containerGeral{
+    @apply flex flex-col justify-center items-center gap-[32px];
+    .bannerContainer{
+        @apply flex flex-col justify-center items-center mt-20 gap-[32px];
+        .bannerTxt{
+            @apply text-[1.5rem] text-white text-center w-full mt-10;
+            & h2{
+                @apply text-[1.7rem] text-black;
+        }
+        & p{
+            @apply text-[1.2rem] text-black py-6;
+        }
+        & button {
+            @apply justify-center;
+            & h2{
+                @apply text-[1.2rem] p-2 text-white;
+            }
+        }
+    }
+    & .bannerImg{
+        @apply w-full;
+    }
+    }
+    & .cardsContainer{
+        @apply flex flex-col justify-center items-center gap-[32px];
+    & .card {
+        @apply w-full justify-center;
+    & h2 {
+        @apply text-[1.5rem] text-white pt-5;
+    }
+    & p {
+        @apply text-[1.2rem] text-white py-10;
+    }
+    & .imagemCard {
+        @apply w-[fit] h-[35vh];
+    }
+    }
+
+}
+    }
+}
+@media (min-width: 641px) and (max-width: 785px) {
+    .containerInicio{
+        @apply flex flex-col justify-center items-center gap-[32px] h-[45vh];
+
+        & .inicial{
+            @apply text-red-600;
+        & h1{
+            @apply text-[1.2rem];
+        }
+        & p{
+            @apply text-[1.6rem];
+        }
+        & span{
+            @apply text-[1.2rem];
+        }
+        & .textoHome{
+            @apply text-[1.2rem] w-[70%];
+        }
+        & .botaoHome {
+            @apply text-[1rem];
+        & Link {
+            @apply text-[1rem] ;
+        }
+        }
+        }
+
+    }
+    .txtOpcoes{
+        @apply text-slate-950;
+        & h2{
+            @apply text-[1.5rem] ;
+        }
+        & p{
+            @apply text-[1.2rem] text-slate-950;
+            }
+    }
+    .opcaoPrincipal{
+        @apply flex flex-col justify-center align-middle mb-20 gap-[40px];
+        & button{
+            @apply w-full pt-[100px] pb-[200px] justify-center;
+        }
+        & h2 {
+            @apply text-[1.5rem] text-white text-center;
+        }
+        & p{
+            @apply text-[1rem] text-white text-center;
+        }
+    }
+
+    .containerMapa{
+        @apply flex flex-col justify-center items-center gap-[32px];
+    & .containerTxt{
+        @apply flex flex-col justify-center w-full items-center gap-[32px];
+    & h2{
+        @apply pt-20 text-[1.7rem] text-white;
+    }
+    & p {
+        @apply text-[1.2rem] text-white w-4/5 pb-12;
+    }
+    }
+    & .mapa iframe{
+        @apply w-[570px] h-[460px] ;
+    }
+}
+.txtOpcoes{
+    @apply text-slate-950;
+    & h2{
+        @apply text-[1.5rem] ;
+    }
+    & p{
+        @apply text-[1.2rem] text-slate-950;
+        }
+}
+.opcaoPrincipal{
+    @apply flex flex-col justify-center align-middle mb-20 gap-[40px];
+    & button{
+        @apply w-full pt-[100px] pb-[200px] justify-center;
+    }
+    & h2 {
+        @apply text-[1.5rem] text-white text-center;
+    }
+    & p{
+        @apply text-[1rem] text-white text-center;
+    }
+}
+
+.containerMapa{
+    @apply flex flex-col justify-center items-center gap-[32px];
+& .containerTxt{
+    @apply flex flex-col justify-center w-full items-center gap-[32px];
+& h2{
+    @apply pt-20 text-[1.7rem] text-white;
+}
+& p {
+    @apply text-[1.2rem] text-white w-4/5 pb-12;
+}
+}
+& .mapa iframe{
+    @apply w-[570px] h-[460px] ;
+}
+}
+.containerGeral{
+    @apply flex flex-col justify-center items-center gap-[32px];
+    .bannerContainer{
+        @apply flex flex-col justify-center items-center mt-20 gap-[32px];
+        .bannerTxt{
+            @apply text-[1.5rem] text-white text-center w-full mt-10;
+            & h2{
+                @apply text-[1.7rem] text-black;
+        }
+        & p{
+            @apply text-[1.2rem] text-black py-6;
+        }
+        & button {
+            @apply justify-center;
+            & h2{
+                @apply text-[1.2rem] p-2 text-white;
+            }
+        }
+    }
+    & .bannerImg{
+        @apply w-full;
+    }
+    }
+    & .cardsContainer{
+        @apply flex flex-col justify-center items-center gap-[32px];
+    & .card {
+        @apply w-full justify-center;
+    & h2 {
+        @apply text-[1.5rem] text-white pt-5;
+    }
+    & p {
+        @apply text-[1.2rem] text-white py-10;
+    }
+    & .imagemCard {
+        @apply w-[fit] h-[35vh];
+    }
+    }
+
+}
+    }
+}
+@media (min-width: 786px) and (max-width: 961px) {
+
+
+    .containerMapa{
+        @apply flex flex-col justify-center items-center gap-[32px];
+    & .containerTxt{
+        @apply flex flex-col justify-center w-full items-center gap-[32px];
+    & h2{
+        @apply pt-20 text-[1.7rem] text-white;
+    }
+    & p {
+        @apply text-[1.2rem] text-white w-4/5 pb-12;
+    }
+    }
+    & .mapa{ 
+        @apply pb-14;
+    & iframe{
+        @apply w-[620px] h-[460px] ;
+    }
+    }
+}
+.containerInicio{
+    @apply flex flex-col justify-center items-center gap-[32px] h-[45vh];
+
+    & .inicial{
+        @apply text-red-600;
+    & h1{
+        @apply text-[1.2rem];
+    }
+    & p{
+        @apply text-[1.6rem];
+    }
+    & span{
+        @apply text-[1.2rem];
+    }
+    & .textoHome{
+        @apply text-[1.2rem] w-[70%];
+    }
+    & .botaoHome {
+        @apply text-[1rem];
+    & Link {
+        @apply text-[1rem] ;
+    }
+    }
+    }
+
+}
+.txtOpcoes{
+    @apply text-slate-950;
+    & h2{
+        @apply text-[1.5rem] ;
+    }
+    & p{
+        @apply text-[1.2rem] text-slate-950;
+        }
+}
+.opcaoPrincipal{
+    @apply justify-center align-middle mb-20 gap-[40px];
+    & button{
+        @apply w-full pt-[40px] pb-[200px] justify-center;
+    }
+    & h2 {
+        @apply text-[1.5rem] text-white text-center;
+    }
+    & p{
+        @apply text-[1rem] text-white text-center;
+    }
+}
+.containerGeral{
+    @apply justify-center mx-10 items-center gap-[32px];
+    .bannerContainer{
+        @apply justify-center w-full  items-center mt-20 gap-[32px];
+        .bannerTxt{
+            @apply text-[1.5rem] text-white w-full;
+            & h2{
+                @apply text-[1.5rem] text-black;
+        }
+        & p{
+            @apply text-[1.2rem] text-black;
+        }
+        & button {
+            @apply justify-center;
+            & h2{
+                @apply text-[1.2rem] p-2 text-white;
+            }
+        }
+    }
+    & .bannerImg{
+        @apply w-full;
+    }
+    }
+    & .cardsContainer{
+        @apply justify-center items-center gap-[32px];
+    & .card {
+        @apply w-full justify-center;
+    & h2 {
+        @apply text-[1.5rem] text-white pt-5;
+    }
+    & p {
+        @apply text-[1.2rem] px-4 text-white py-10;
+    }
+    & .imagemCard {
+        @apply w-[fit] h-[20vh];
+    }
+
+
+
+
+            }
+        }
+    }
+}
+@media (min-width: 962px) and (max-width: 1213px) {
+    .containerMapa{
+        @apply justify-center items-center w-full;
+    & .containerTxt{
+        @apply justify-center w-full items-center;
+    & h2{
+        @apply text-[1.7rem] text-white;
+    }
+    & span{
+        @apply text-[1.4rem] py-0 px-[7px] text-white;
+    }
+    & p {
+        @apply text-[1.2rem] text-white;
+    }
+    }
+    & .mapa{ 
+        @apply p-14;
+    & iframe{
+        @apply w-[480px] h-[400px] ;
+    }
+    }
+}
+
+.cardsContainer {
+    @apply flex justify-center items-center gap-[32px] my-[2rem];
+
+& .card {
+    @apply flex flex-col justify-center items-center w-[30%] h-[100%] bg-[#001B74] text-white text-center rounded-[12px] pb-[3%];
+
+& .imagemCard {
+    @apply w-[100%] h-[100%] rounded-[12px] mb-[5%];
+}
+
+& h2 {
+    @apply text-[1.5rem];
+}
+
+& p {
+    @apply text-[1rem] ;
+        }
+    }
+}
+@media (min-width: 1213px) and (max-width: 1440px){
+
+    .cardsContainer {
+        @apply flex justify-center items-center gap-[32px] my-[2rem];
+    
+    & .card {
+        @apply flex flex-col justify-center items-center w-[30%] h-[100%] bg-[#001B74] text-white text-center rounded-[12px] pb-[3%];
+    
+    & .imagemCard {
+        @apply w-[100%] h-[100%] rounded-[12px] mb-[5%];
+    }
+    
+    & h2 {
+        @apply text-[1.5rem];
+    }
+    
+    & p {
+        @apply text-[1rem] ;
+            }
+        }
+    }
+}
+
+}
 
 
         /* Pagina Inicial */
