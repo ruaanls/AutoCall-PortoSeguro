@@ -428,6 +428,33 @@ body {
 }
     }
 }
+@media (min-width: 641px) and (max-width: 785px) {
+    .containerInicio{
+        @apply flex flex-col justify-center items-center gap-[32px] h-[45vh];
+
+        & .inicial{
+            @apply text-red-600;
+        & h1{
+            @apply text-[1.2rem];
+        }
+        & p{
+            @apply text-[1.6rem];
+        }
+        & span{
+            @apply text-[1.2rem];
+        }
+        & .textoHome{
+            @apply text-[1.2rem] w-[70%];
+        }
+        & .botaoHome {
+            @apply text-[1rem];
+        & Link {
+            @apply text-[1rem] ;
+        }
+        }
+        }
+
+    }
 
 
         /* Pagina Inicial */
