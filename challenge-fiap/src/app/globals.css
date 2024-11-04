@@ -638,6 +638,50 @@ body {
         @apply text-[1rem] text-white text-center;
     }
 }
+.containerGeral{
+    @apply justify-center mx-10 items-center gap-[32px];
+    .bannerContainer{
+        @apply justify-center w-full  items-center mt-20 gap-[32px];
+        .bannerTxt{
+            @apply text-[1.5rem] text-white w-full;
+            & h2{
+                @apply text-[1.5rem] text-black;
+        }
+        & p{
+            @apply text-[1.2rem] text-black;
+        }
+        & button {
+            @apply justify-center;
+            & h2{
+                @apply text-[1.2rem] p-2 text-white;
+            }
+        }
+    }
+    & .bannerImg{
+        @apply w-full;
+    }
+    }
+    & .cardsContainer{
+        @apply justify-center items-center gap-[32px];
+    & .card {
+        @apply w-full justify-center;
+    & h2 {
+        @apply text-[1.5rem] text-white pt-5;
+    }
+    & p {
+        @apply text-[1.2rem] px-4 text-white py-10;
+    }
+    & .imagemCard {
+        @apply w-[fit] h-[20vh];
+    }
+
+
+
+
+            }
+        }
+    }
+}
 
 
 
