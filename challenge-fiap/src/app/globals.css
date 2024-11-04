@@ -682,6 +682,48 @@ body {
         }
     }
 }
+@media (min-width: 962px) and (max-width: 1213px) {
+    .containerMapa{
+        @apply justify-center items-center w-full;
+    & .containerTxt{
+        @apply justify-center w-full items-center;
+    & h2{
+        @apply text-[1.7rem] text-white;
+    }
+    & span{
+        @apply text-[1.4rem] py-0 px-[7px] text-white;
+    }
+    & p {
+        @apply text-[1.2rem] text-white;
+    }
+    }
+    & .mapa{ 
+        @apply p-14;
+    & iframe{
+        @apply w-[480px] h-[400px] ;
+    }
+    }
+}
+
+.cardsContainer {
+    @apply flex justify-center items-center gap-[32px] my-[2rem];
+
+& .card {
+    @apply flex flex-col justify-center items-center w-[30%] h-[100%] bg-[#001B74] text-white text-center rounded-[12px] pb-[3%];
+
+& .imagemCard {
+    @apply w-[100%] h-[100%] rounded-[12px] mb-[5%];
+}
+
+& h2 {
+    @apply text-[1.5rem];
+}
+
+& p {
+    @apply text-[1rem] ;
+        }
+    }
+}
 
 
 
