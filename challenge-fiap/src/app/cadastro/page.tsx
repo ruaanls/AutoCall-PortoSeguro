@@ -9,6 +9,7 @@ export default function Cadastro() {
     const navigate = useRouter();
     
     const [dadosResposta, setDadosResposta] = useState<TipoCadastro>();
+    const [erroCadastro, setErroCadastro] = useState<string>("");  // Adiciona um estado para a mensagem de erro
     const [cadastro, setCadastro] = useState<TipoCadastro>({
         cpf: "",
         nome: "",
@@ -27,6 +28,8 @@ export default function Cadastro() {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        setErroCadastro("");  // Limpa a mensagem de erro ao tentar novamente
+
         try {
             const resposta = await fetch("http://localhost:5000/cadastro", {
                 method: "POST",
@@ -40,6 +43,7 @@ export default function Cadastro() {
                 alert("PASSOU!!!! API DEU CERTO");
                 const dados = await resposta.json(); // Pegando os dados da resposta
                 setDadosResposta(dados);
+                console.log(dadosResposta)
                 setCadastro({
                     cpf: "",
                     nome: "",
@@ -47,14 +51,20 @@ export default function Cadastro() {
                     cep: "",
                     senha: ""
                 });
-                setTimeout(()=>
-                {
+                setTimeout(() => {
                     navigate.push("/")
-                },3000)
+                }, 3000);
+            } else {
+                setErroCadastro("CPF JÁ CADASTRADO");
                 
+                setTimeout(() => {
+                    window.location.reload();  // Recarrega a página após 3 segundos
+                }, 3000);
+                // Define a mensagem de erro se a resposta não for ok
             }
         } catch (error) {
-            alert("DEU ERRADO F :( " + error);
+            setErroCadastro("Erro ao cadastrar. Tente novamente.");
+            console.log(error)  // Define uma mensagem genérica de erro em caso de exceção
         }
     };
 
@@ -69,6 +79,7 @@ export default function Cadastro() {
                     <div className="conteiner-form-cad">
                         <h1>Crie sua conta Porto</h1>
                         
+                        {erroCadastro && <h1 style={{ color: 'red' }}>{erroCadastro}</h1>} {/* Renderiza o erro se houver */}
 
                         <form onSubmit={handleSubmit} className="cadastro-form">
                             <div className="cadastro-row">

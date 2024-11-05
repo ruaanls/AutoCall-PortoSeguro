@@ -3,11 +3,11 @@
 import Image from 'next/image';
 import imgLogin from '@/img/img-cadastro-veiculos.png';
 import { useState } from 'react';
-import { useRouter } from 'next/navigation'
+/*import { useRouter } from 'next/navigation'*/
 import { TipoCadastroVeiculo } from '../types/types';
 
 export default function CadastroVeiculo() {
-    const navigate = useRouter();
+    /*const navigate = useRouter();*/
     const [cadastroVeiculo, setCadastroVeiculo] = useState<TipoCadastroVeiculo>({
         cpf:"",
         veiculo:{

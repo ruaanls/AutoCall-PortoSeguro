@@ -10,6 +10,8 @@ export default function Login() {
         senha: ""
     });
 
+    const [erroLogin, setErroLogin] = useState<string>("");
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setLogin((prevState) => ({
@@ -35,10 +37,13 @@ export default function Login() {
             if (resposta.ok) {
                 alert("PASSOU!!!! API DEU CERTO");
                 const dados = await resposta.json();
+                console.log(dados)
                 setLogin({ cpf: "", senha: "" });
             } else {
-                const erroDados = await resposta.json();
-                alert("Erro: " + (erroDados.message || "Problema ao fazer login."));
+                setErroLogin("CPF OU SENHA INVÁLIDOS: ")
+                setTimeout(() => {
+                    window.location.reload();  // Recarrega a página após 3 segundos
+                }, 3000);
             }
         } catch (error) {
             alert("DEU ERRADO :/ " + error);
@@ -54,6 +59,7 @@ export default function Login() {
                 <div className="containerExternoForm" style={{ height: "100% !important" }}>
                     <div className="containerForm">
                         <h1 className="text-[1.5rem] mb-[1rem]">Bem-vindo de volta :)</h1>
+                        {erroLogin && <h1 style={{ color: 'red' }}>{erroLogin}</h1>}
                         <form className="form" onSubmit={handleSubmit}>
                             <div className="linha">
                                 <input

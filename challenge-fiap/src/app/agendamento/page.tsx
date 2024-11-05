@@ -18,6 +18,8 @@ export default function Agendamento() {
         }
     })
 
+    const [erroAgendamento, seterroAgendamento] = useState<string>("");
+
     const [centrosAutomotivos, setcentrosAutomotivos] = useState<TipoCentroAutomotivo[]>([])
 
     useEffect(() => {
@@ -27,7 +29,6 @@ export default function Agendamento() {
                 const data = await resposta.json();
                 
                 setcentrosAutomotivos(data)
-                alert("DEU CERTO")
             } 
             catch (error) {
                 alert("Erro ao buscar centros automotivos:" + error);
@@ -111,11 +112,19 @@ export default function Agendamento() {
                 navigate.push("/");
                 
             }
+
+            else
+            {
+                seterroAgendamento("Placa não cadastrada")
+                setTimeout(() => {
+                    window.location.reload();  // Recarrega a página após 3 segundos
+                }, 3000);
+            }
             
         }
         catch(error)
         {
-            alert("DEU ERRADO :/ "+ error);
+            console.log(error)
         }
     }
 
@@ -123,6 +132,7 @@ export default function Agendamento() {
         <div className="agendamento-container">
             <div className="form-container-agenda">
                 <h1>Agendamento de Conserto</h1>
+                {erroAgendamento && <h1 style={{ color: 'red' }}>{erroAgendamento}</h1>}
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="idProblema">Problema</label>
